@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/ec73e0dced.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+<body>
+    <nav class=" bg-gray-800 p-4">
+       
+
+        <div class="container mx-auto flex justify-between center">
+            <a href="#"><img src="/images/logo.png" alt="" class="w-56"></a>
+
+
+            <ul class="flex space-x-4 mt-6">
+                <!-- Dropdown Menu -->
+                <li class="relative">
+                  <a href="#" class="text-white hover:text-gray-300">  Categories<i class="fa-solid fa-caret-down ml-1" 
+                  ></i> </a>
+                  <!-- Dropdown Content -->
+                  <ul class="absolute left-0 mt-2 bg-gray-800 rounded-md shadow-lg hidden">
+                    <li><a href="#" class="block px-4 py-2 text-sm text-white hover:bg-gray-700">Category 1</a></li>
+                    <li><a href="#" class="block px-4 py-2 text-sm text-white hover:bg-gray-700">Category 2</a></li>
+                    <li><a href="#" class="block px-4 py-2 text-sm text-white hover:bg-gray-700">Category 3</a></li>
+                  </ul>
+                </li>
+                <!-- Other Links -->
+                <li><a href="#" class="text-white hover:text-gray-300">Home</a></li>
+                <li><a href="#" class="text-white hover:text-gray-300">Products</a></li>
+                <li><a href="#" class="text-white hover:text-gray-300">About</a></li>
+                <li><a href="#" class="text-white hover:text-gray-300">Contact</a></li>
+              </ul>
+                    
+
+            </ul>
+            <!-- Search Bar -->
+            <div class="relative ">
+                <input type="text"   placeholder="Search" class="bg-gray-700 text-white px-4 py-2 rounded-md focus:outline-none focus:bg-white focus:text-gray-800 mt-3">
+                
+              </div>
+
+              <div class="mt-4 ">
+                <a href="" class="text-white">  <i class="fa-solid fa-user text-white mr-1"></i> login / Sign Up</a>
+                
+              </div>
+              <!--Cart Icon-->
+              <div>
+                <i class="fa-solid fa-cart-shopping fa-2x text-yellow-300 mt-3 mr-10 cursor-pointer" ></i>
+              </div>
+            
+        </div>
+    </nav>
+
+    <!--Hero Section-->
+    <section class="bg-gray-900 text-white py-20 bg-cover bg-center relative" style="background-image: url('/images/cover.jpg');">
+      
+      <div class="absolute inset-0" style="background: linear-gradient( rgba(7, 0, 53, 0.541), rgba(7, 0, 53, 0.541));"></div>
+      <div class="container mx-auto text-center relative z-10">
+        <h1 class="text-5xl font-bold mb-4">Welcome to Our Online Store</h1>
+        <p class="text-lg mb-8">Explore our wide range of products and find what you need</p>
+        <a href="#" class=" transition duration-700 ease-in-out bg-white text-gray-900 px-6 py-3 rounded-full font-bold inline-block hover:bg-gray-800 hover:text-white ">Shop Now</a>
+      </div>
+    </section>
+    
+<!--products section-->
+    <section>
+      <div class="container mx-auto py-8">
+        <h1 class="text-4xl font-bold mb-7 text-center mt-10">OUR PRODUCTS</h1>
+        
+        <!-- Product Cards -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-24">
+          
+          <div class="bg-white rounded-lg overflow-hidden shadow-md">
+            
+            <img src="/images/shoe.jpg" alt="Product" class="w-full h-48 object-cover">
+            
+            <div class="p-4">
+              <h3 class="text-lg font-semibold mb-2">Nike Shoe</h3>
+              <p class="text-gray-700 mb-2">$99.99</p>
+             
+              <div class="flex items-center mb-4">
+                <label for="quantity" class="mr-2">Quantity:</label>
+                <input type="number" id="quantity" name="quantity" class="w-16 px-2 py-1 border rounded-md">
+              </div>
+              <!-- Add to Cart Button -->
+              <button class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600">Add to Cart</button>
+            </div>
+          </div>
+
+
+
+          
+          <div class="bg-white rounded-lg overflow-hidden shadow-md">
+            
+            <img src="/images/mobile phone.jpg" alt="Product" class="w-full h-48 object-cover">
+            
+            <div class="p-4">
+              <h3 class="text-lg font-semibold mb-2">Nike Shoe</h3>
+              <p class="text-gray-700 mb-2">$99.99</p>
+             
+              <div class="flex items-center mb-4">
+                <label for="quantity" class="mr-2">Quantity:</label>
+                <input type="number" id="quantity" name="quantity" class="w-16 px-2 py-1 border rounded-md">
+              </div>
+              <!-- Add to Cart Button -->
+              <button class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600">Add to Cart</button>
+            </div>
+          </div>
+
+
+
+          
+          <div class="bg-white rounded-lg overflow-hidden shadow-md">
+            
+            <img src="/images/clothing.jpg" alt="Product" class="w-full h-48 object-cover">
+            
+            <div class="p-4">
+              <h3 class="text-lg font-semibold mb-2">Nike Shoe</h3>
+              <p class="text-gray-700 mb-2">$99.99</p>
+             
+              <div class="flex items-center mb-4">
+                <label for="quantity" class="mr-2">Quantity:</label>
+                <input type="number" id="quantity" name="quantity" class="w-16 px-2 py-1 border rounded-md">
+              </div>
+              <!-- Add to Cart Button -->
+              <button class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600">Add to Cart</button>
+            </div>
+          </div>
+
+
+          
+          <div class="bg-white rounded-lg overflow-hidden shadow-md">
+            
+            <img src="/images/grocery.jpg" alt="Product" class="w-full h-48 object-cover">
+            
+            <div class="p-4">
+              <h3 class="text-lg font-semibold mb-2">Nike Shoe</h3>
+              <p class="text-gray-700 mb-2">$99.99</p>
+             
+              <div class="flex items-center mb-4">
+                <label for="quantity" class="mr-2">Quantity:</label>
+                <input type="number" id="quantity" name="quantity" class="w-16 px-2 py-1 border rounded-md">
+              </div>
+              <!-- Add to Cart Button -->
+              <button class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600">Add to Cart</button>
+            </div>
+          </div>
+      
+         
+        </div>
+      </div>
+
+
+      
+      
+
+    </section>
+</body>
+</html>
