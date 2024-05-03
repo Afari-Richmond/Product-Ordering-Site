@@ -6,7 +6,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/ec73e0dced.js" crossorigin="anonymous"></script>
-    <title>Document</title>
+    <title>Online Ordering Shopping Cart</title>
 </head>
 <body>
     <nav class=" bg-gray-800 p-4">
@@ -18,21 +18,29 @@
 
             <ul class="flex space-x-4 mt-6">
                 <!-- Dropdown Menu -->
-                <li class="relative">
-                  <a href="#" class="text-white hover:text-gray-300">  Categories<i class="fa-solid fa-caret-down ml-1" 
+                <li class="relative ">
+                  <a href="#" class="text-white hover:text-gray-300 ">  Categories<i class="fa-solid fa-caret-down ml-1" 
                   ></i> </a>
-                  <!-- Dropdown Content -->
-                  <ul class="absolute left-0 mt-2 bg-gray-800 rounded-md shadow-lg hidden">
-                    <li><a href="#" class="block px-4 py-2 text-sm text-white hover:bg-gray-700">Category 1</a></li>
-                    <li><a href="#" class="block px-4 py-2 text-sm text-white hover:bg-gray-700">Category 2</a></li>
-                    <li><a href="#" class="block px-4 py-2 text-sm text-white hover:bg-gray-700">Category 3</a></li>
-                  </ul>
-                </li>
-                <!-- Other Links -->
+
+                    <!-- Other Links -->
                 <li><a href="#" class="text-white hover:text-gray-300">Home</a></li>
                 <li><a href="#" class="text-white hover:text-gray-300">Products</a></li>
                 <li><a href="#" class="text-white hover:text-gray-300">About</a></li>
                 <li><a href="#" class="text-white hover:text-gray-300">Contact</a></li>
+
+
+
+
+                  <!-- Dropdown Content -->
+                  <ul class="absolute left-80 mt-8 bg-gray-800 rounded-md shadow-lg z-50 ">
+                    <li><a href="#" class="block px-4 py-2  text-sm text-white hover:bg-gray-700">Clothing</a></li>
+                    <li><a href="#" class="block px-4 py-2 text-sm text-white hover:bg-gray-700">Grocery</a></li>
+                    <li><a href="#" class="block px-4 py-2 text-sm text-white hover:bg-gray-700">Stationery</a></li>
+                    <li><a href="#" class="block px-4 py-2 text-sm text-white hover:bg-gray-700">Furniture</a></li>
+                    <li><a href="#" class="block px-4 py-2 text-sm text-white hover:bg-gray-700">Provisions</a></li>
+                  </ul>
+                </li>
+              
               </ul>
                     
 
@@ -272,14 +280,14 @@
     </footer>
 
 
-    <div class="fixed top-0 right-0 w-72 bg-white border-l border-gray-200 shadow-md p-4">
+    <div class="fixed top-0 right-0 w-72 bg-white border-l border-gray-200 shadow-md p-4 hidden">
       <div class="mb-4">
           <h2 class="text-lg font-semibold mb-2">Your Cart</h2>
           <div class="divide-y divide-gray-200">
               <!-- Sample cart items -->
               <div class="py-2 flex justify-between items-center">
                   <div class="flex items-center">
-                      <img src="product1.jpg" alt="Product 1" class="w-12 h-12 object-cover mr-2">
+                      <img src="/images/clothing.jpg" alt="Product 1" class="w-12 h-12 object-cover mr-2">
                       <div>
                           <div class="font-semibold">Product 1</div>
                           <div class="text-sm text-gray-500">Price: $20</div>
@@ -294,7 +302,7 @@
               </div>
               <div class="py-2 flex justify-between items-center">
                   <div class="flex items-center">
-                      <img src="product2.jpg" alt="Product 2" class="w-12 h-12 object-cover mr-2">
+                      <img src="/images/building equipment.jpg" alt="Product 2" class="w-12 h-12 object-cover mr-2">
                       <div>
                           <div class="font-semibold">Product 2</div>
                           <div class="text-sm text-gray-500">Price: $15</div>
