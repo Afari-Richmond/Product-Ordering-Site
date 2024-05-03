@@ -32,7 +32,7 @@
 
 
                   <!-- Dropdown Content -->
-                  <ul class="absolute left-80 mt-8 bg-gray-800 rounded-md shadow-lg z-50 ">
+                  <ul class="absolute left-80 mt-8 bg-gray-800 rounded-md shadow-lg z-50 hidden ">
                     <li><a href="#" class="block px-4 py-2  text-sm text-white hover:bg-gray-700">Clothing</a></li>
                     <li><a href="#" class="block px-4 py-2 text-sm text-white hover:bg-gray-700">Grocery</a></li>
                     <li><a href="#" class="block px-4 py-2 text-sm text-white hover:bg-gray-700">Stationery</a></li>
@@ -56,9 +56,12 @@
                 
               </div>
               <!--Cart Icon-->
-              <div>
-                <i class="fa-solid fa-cart-shopping fa-2x text-yellow-300 mt-3 mr-10 cursor-pointer" ></i>
+              <div class="relative flex items-center justify-center">
+                <i class="fa-solid fa-cart-shopping fa-2x text-yellow-300 cursor-pointer"></i>
+                <!-- Cart Item Count -->
+                <span class="absolute top-1 -right-3 bg-red-500 text-white px-2 py-1 rounded-full text-xs cursor-pointer hidden">5</span>
               </div>
+              
             
         </div>
     </nav>
