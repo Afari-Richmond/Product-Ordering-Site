@@ -10,7 +10,24 @@ document.getElementById('categories-link').addEventListener('click', ()=>{
 
 })
 
+//search area functionality
+document.getElementById('search').addEventListener('keypress', (event)=>{
+    if(event.keyCode === 13){
+        location.reload()
+    }
+})
 
+//cart icon functionality
+cartSummary = document.getElementById('cart-summary');
+    document.getElementById('cart-icon').addEventListener('click',()=>{
+        cartSummary.classList.remove('hidden')
+
+    })
+
+    //close cart button
+    document.getElementById('remove-btn').addEventListener('click',()=>{
+        cartSummary.classList.add('hidden')
+    })
 
 
 

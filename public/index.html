@@ -47,7 +47,7 @@
             </ul>
             <!-- Search Bar -->
             <div class="relative ">
-                <input type="text"   placeholder="Search" class="bg-gray-700 text-white px-4 py-2 rounded-md focus:outline-none focus:bg-white focus:text-gray-800 mt-3">
+                <input type="text"   placeholder="Search" class="bg-gray-700 text-white px-4 py-2 rounded-md focus:outline-none focus:bg-white focus:text-gray-800 mt-3" id="search">
                 
               </div>
 
@@ -56,10 +56,10 @@
                 
               </div>
               <!--Cart Icon-->
-              <div class="relative flex items-center justify-center">
-                <i class="fa-solid fa-cart-shopping fa-2x text-yellow-300 cursor-pointer"></i>
+              <div class="relative flex items-center justify-center" >
+                <i class="fa-solid fa-cart-shopping fa-2x text-yellow-300 cursor-pointer"  id="cart-icon"></i>
                 <!-- Cart Item Count -->
-                <span class="absolute top-1 -right-3 bg-red-500 text-white px-2 py-1 rounded-full text-xs cursor-pointer hidden">5</span>
+                <span class="absolute top-1 -right-3 bg-red-500 text-white px-2 py-1 rounded-full text-xs cursor-pointer hidden" id="cart-number">5</span>
               </div>
               
             
@@ -283,7 +283,7 @@
     </footer>
 
 
-    <div class="fixed top-0 right-0 w-72 bg-white border-l border-gray-200 shadow-md p-4 hidden">
+    <div class="fixed top-0 right-0 w-72 bg-white border-l border-gray-200 shadow-md p-4 hidden" id="cart-summary">
       <div class="mb-4">
           <h2 class="text-lg font-semibold mb-2">Your Cart</h2>
           <div class="divide-y divide-gray-200">
@@ -316,7 +316,7 @@
                       <span class="mx-2">1</span>
                       <button class="text-gray-500 hover:text-gray-700">+</button>
                   </div>
-                  <button class="text-red-500 hover:text-red-700">Remove</button>
+                  <button class="text-red-500 hover:text-red-700" >Remove</button>
               </div>
               <!-- End of sample cart items -->
           </div>
@@ -330,12 +330,12 @@
               <span class="font-semibold">Total Price:</span>
               <span id="total-price">$35</span>
           </div>
-          <button class="mt-4 w-full bg-red-500 text-white font-semibold py-2 px-4 rounded hover:bg-red-600">
+          <button class="mt-4 w-full bg-red-500 text-white font-semibold py-2 px-4 rounded hover:bg-red-600" >
               Remove All
           </button>
       </div>
       <div class="mt-4 flex justify-end">
-          <button class="text-gray-500 hover:text-gray-700">Close</button>
+          <button class="text-gray-500 hover:text-gray-700 cursor-pointer" id="remove-btn">Close</button>
       </div>
   </div>
   
