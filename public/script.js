@@ -4,6 +4,14 @@ document.getElementById('cart-logo').addEventListener('click', ()=>{
 })
 
 //drop-down menu for the categories link
+ const categoriesList = document.getElementById('categories-list');
+document.getElementById('categories-link').addEventListener('click', ()=>{
+    categoriesList.classList.toggle('hidden');
+
+})
+
+
+
 
 
 
