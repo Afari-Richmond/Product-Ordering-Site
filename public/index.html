@@ -9,7 +9,7 @@
     <title>Online Ordering Shopping Cart</title>
 </head>
 <body>
-    <nav class=" bg-gray-800 p-4">
+    <nav class=" bg-gray-800 p-4 fixed top-0 w-full z-50 ">
        
 
         <div class="container mx-auto flex justify-between center">
@@ -70,15 +70,15 @@
     <section class="bg-gray-900 text-white py-20 bg-cover bg-center relative" style="background-image: url('/images/cover.jpg');">
       
       <div class="absolute inset-0" style="background: linear-gradient( rgba(7, 0, 53, 0.541), rgba(7, 0, 53, 0.541));"></div>
-      <div class="container mx-auto text-center relative z-10">
-        <h1 class="text-5xl font-bold mb-4">Welcome to Our Online Store</h1>
+      <div class="container mx-auto text-center relative z-10 mt-28">
+        <h1 class="text-5xl font-bold mb-4 ">Welcome to Our Online Store</h1>
         <p class="text-lg mb-8">Explore our wide range of products and find what you need</p>
-        <a href="#" class=" transition duration-700 ease-in-out bg-white text-gray-900 px-6 py-3 rounded-full font-bold inline-block hover:bg-gray-800 hover:text-white ">Shop Now</a>
+        <a href="#shop-now-section" class=" transition duration-700 ease-in-out bg-white text-gray-900 px-6 py-3 rounded-full font-bold inline-block hover:bg-gray-800 hover:text-white " id="shop-btn">Shop Now</a>
       </div>
     </section>
     
 <!--products section-->
-    <section>
+    <section id="shop-now-section">
       <div class="container mx-auto py-8">
         <h1 class="text-4xl font-bold mb-7 text-center mt-10">OUR PRODUCTS</h1>
         
@@ -283,7 +283,7 @@
     </footer>
 
 
-    <div class="fixed top-0 right-0 w-72 bg-white border-l border-gray-200 shadow-md p-4 hidden" id="cart-summary">
+    <div class="fixed top-0 right-0 w-72 bg-white border-l border-gray-200 shadow-md p-4 hidden z-50" id="cart-summary">
       <div class="mb-4">
           <h2 class="text-lg font-semibold mb-2">Your Cart</h2>
           <div class="divide-y divide-gray-200">

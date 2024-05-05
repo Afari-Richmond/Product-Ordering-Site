@@ -29,7 +29,7 @@ cartSummary = document.getElementById('cart-summary');
         cartSummary.classList.add('hidden')
     })
 
-
+    
 
 
 
