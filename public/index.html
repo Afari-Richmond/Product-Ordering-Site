@@ -59,7 +59,7 @@
               <div class="relative flex items-center justify-center" >
                 <i class="fa-solid fa-cart-shopping fa-2x text-yellow-300 cursor-pointer"  id="cart-icon"></i>
                 <!-- Cart Item Count -->
-                <span class="absolute top-1 -right-3 bg-red-500 text-white px-2 py-1 rounded-full text-xs cursor-pointer hidden" id="cart-number">5</span>
+                <span class="absolute top-1 -right-3 bg-red-500 text-white px-2 py-1 rounded-full text-xs cursor-pointer hidden" id="cart-number">0</span>
               </div>
               
             
@@ -83,9 +83,9 @@
         <h1 class="text-4xl font-bold mb-7 text-center mt-10">OUR PRODUCTS</h1>
         
         <!-- Product Cards -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-24">
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-24" >
           
-          <div class="bg-white rounded-lg overflow-hidden shadow-md">
+          <div class="bg-white rounded-lg overflow-hidden shadow-md"  id="item-1" >
             
             <img src="/images/shoe.jpg" alt="Product" class="w-full h-48 object-cover">
             
@@ -98,14 +98,14 @@
                 <input type="number" id="quantity" name="quantity" class="w-16 px-2 py-1 border rounded-md">
               </div>
               <!-- Add to Cart Button -->
-              <button class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600">Add to Cart</button>
+              <button class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600" id="add-to-cart">Add to Cart</button>
             </div>
           </div>
 
 
 
           
-          <div class="bg-white rounded-lg overflow-hidden shadow-md">
+          <div class="bg-white rounded-lg overflow-hidden shadow-md" id="item-2" >
             
             <img src="/images/mobile phone.jpg" alt="Product" class="w-full h-48 object-cover">
             
@@ -118,14 +118,14 @@
                 <input type="number" id="quantity" name="quantity" class="w-16 px-2 py-1 border rounded-md">
               </div>
               <!-- Add to Cart Button -->
-              <button class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600">Add to Cart</button>
+              <button class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600" id="add-to-cart">Add to Cart</button>
             </div>
           </div>
 
 
 
           
-          <div class="bg-white rounded-lg overflow-hidden shadow-md">
+          <div class="bg-white rounded-lg overflow-hidden shadow-md" id="item-3" >
             
             <img src="/images/clothing.jpg" alt="Product" class="w-full h-48 object-cover">
             
@@ -138,13 +138,13 @@
                 <input type="number" id="quantity" name="quantity" class="w-16 px-2 py-1 border rounded-md">
               </div>
               <!-- Add to Cart Button -->
-              <button class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600">Add to Cart</button>
+              <button class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600" id="add-to-cart">Add to Cart</button>
             </div>
           </div>
 
 
           
-          <div class="bg-white rounded-lg overflow-hidden shadow-md">
+          <div class="bg-white rounded-lg overflow-hidden shadow-md" id="item-4" >
             
             <img src="/images/grocery.jpg" alt="Product" class="w-full h-48 object-cover">
             
@@ -157,12 +157,12 @@
                 <input type="number" id="quantity" name="quantity" class="w-16 px-2 py-1 border rounded-md">
               </div>
               <!-- Add to Cart Button -->
-              <button class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600">Add to Cart</button>
+              <button class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600" id="add-to-cart">Add to Cart</button>
             </div>
           </div>
 
 
-          <div class="bg-white rounded-lg overflow-hidden shadow-md">
+          <div class="bg-white rounded-lg overflow-hidden shadow-md" id="item-5" >
             
             <img src="/images/building equipment.jpg" alt="Product" class="w-full h-48 object-cover">
             
@@ -175,12 +175,12 @@
                 <input type="number" id="quantity" name="quantity" class="w-16 px-2 py-1 border rounded-md">
               </div>
               <!-- Add to Cart Button -->
-              <button class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600">Add to Cart</button>
+              <button class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600" id="add-to-cart">Add to Cart</button>
             </div>
           </div>
 
 
-          <div class="bg-white rounded-lg overflow-hidden shadow-md">
+          <div class="bg-white rounded-lg overflow-hidden shadow-md" id="item-6" >
             
             <img src="/images/furniture.jpg" alt="Product" class="w-full h-48 object-cover">
             
@@ -193,13 +193,13 @@
                 <input type="number" id="quantity" name="quantity" class="w-16 px-2 py-1 border rounded-md">
               </div>
               <!-- Add to Cart Button -->
-              <button class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600">Add to Cart</button>
+              <button class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600" id="add-to-cart">Add to Cart</button>
             </div>
           </div>
 
 
 
-          <div class="bg-white rounded-lg overflow-hidden shadow-md">
+          <div class="bg-white rounded-lg overflow-hidden shadow-md" id="item-7" >
             
             <img src="/images/machinery.jpg" alt="Product" class="w-full h-48 object-cover">
             
@@ -212,12 +212,12 @@
                 <input type="number" id="quantity" name="quantity" class="w-16 px-2 py-1 border rounded-md">
               </div>
               <!-- Add to Cart Button -->
-              <button class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600">Add to Cart</button>
+              <button class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600" id="add-to-cart">Add to Cart</button>
             </div>
           </div>
 
 
-          <div class="bg-white rounded-lg overflow-hidden shadow-md">
+          <div class="bg-white rounded-lg overflow-hidden shadow-md" id="item-8" >
             
             <img src="/images/furniture.jpg" alt="Product" class="w-full h-48 object-cover">
             
@@ -230,7 +230,7 @@
                 <input type="number" id="quantity" name="quantity" class="w-16 px-2 py-1 border rounded-md">
               </div>
               <!-- Add to Cart Button -->
-              <button class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600">Add to Cart</button>
+              <button class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600" id="add-to-cart">Add to Cart</button>
             </div>
           </div>
       
@@ -335,7 +335,7 @@
           </button>
       </div>
       <div class="mt-4 flex justify-end">
-          <button class="text-gray-500 hover:text-gray-700 cursor-pointer" id="remove-btn">Close</button>
+          <button class="text-white py-3 px-3  bg-red-500 hover:text-gray-700 cursor-pointer" id="remove-btn">Close Cart</button>
       </div>
   </div>
   
