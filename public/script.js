@@ -40,6 +40,8 @@ cartSummary = document.getElementById('cart-summary');
 
     addToCartBtns.forEach(button => {
         button.addEventListener('click', () => {
+
+            
             // Get the parent cart item's ID
             var cartItemId = button.closest('.bg-white').id;
     
@@ -57,7 +59,13 @@ cartSummary = document.getElementById('cart-summary');
             }
         });
     });
+
+
+   
     
+
+
+   
     
     
 
