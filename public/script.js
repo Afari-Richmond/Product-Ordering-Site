@@ -99,17 +99,22 @@ let cartSummary = document.getElementById('cart-summary');
     
 
 
-    document.getElementById('remove-all-btn').addEventListener('click', ()=>{
-        //clear all items originally added to the cart
-        cartSummary.querySelector('.divide-y').innerHTML = '';
-        //reset the array keeping track of the added items
-        cartItems = [];
-        //hide the cart number
-        cartNumber.classList.add('hidden')
-        numberOfCartItems = 0;
-        document.getElementById('remove-all-btn').classList.add('hidden');
-
-    })
+    // Event listener attachment for dynamically generated remove buttons
+document.addEventListener('click', function(event) {
+    if (event.target.classList.contains('cart-item-btn')) {
+        const itemDiv = event.target.closest('.cart-item');
+        if (itemDiv) {
+            itemDiv.remove();
+            // Remove the item from the cartItems array
+            const productName = itemDiv.querySelector('.font-semibold').textContent;
+            const index = cartItems.indexOf(productName);
+            if (index !== -1) {
+                cartItems.splice(index, 1);
+                
+            }
+        }
+    }
+});
 
 
 
@@ -124,10 +129,7 @@ let cartSummary = document.getElementById('cart-summary');
         }
     });
     
-
-
-    
-
+   
 
 
    
