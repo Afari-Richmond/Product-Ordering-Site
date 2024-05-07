@@ -18,7 +18,7 @@ document.getElementById('search').addEventListener('keypress', (event)=>{
 })
 
 //cart icon functionality
-cartSummary = document.getElementById('cart-summary');
+let cartSummary = document.getElementById('cart-summary');
     document.getElementById('cart-icon').addEventListener('click',()=>{
         cartSummary.classList.remove('hidden')
 
@@ -29,36 +29,63 @@ cartSummary = document.getElementById('cart-summary');
         cartSummary.classList.add('hidden')
     })
 
-    //Add to cart button
+
+
+    //variable to keep track of the number of items in the cart
     let numberOfCartItems = 0;
+
     const addToCartBtns = document.querySelectorAll('button[id="add-to-cart"]');
     const cartNumber = document.getElementById('cart-number');
-
-    //array to keep track of already added items
-   var cartItems = []
-
-
+   
+    var cartItems = [];
+    //functionality to add items to the cart and update the cart number
     addToCartBtns.forEach(button => {
         button.addEventListener('click', () => {
 
-            
-            // Get the parent cart item's ID
+            //cariables to hold the name, price and image of the selected item
             var cartItemId = button.closest('.bg-white').id;
-    
-            // Use the cart item's ID to select its name
             var productName = document.querySelector(`#${cartItemId} h3`).textContent;
+            var productPrice = document.querySelector(`#${cartItemId} p`).textContent;
+            var productImage = document.querySelector(`#${cartItemId} img`).getAttribute('src');
+
+            //if item already exists in the cart,give the user an alert else update the cart number and output it 
+            //also update the cartitems array to keep track of that particular item 
     
-            if(cartItems.includes(productName)) {
+            if (cartItems.includes(productName)) {
                 alert('Item already exists in the cart');
             } else {
                 numberOfCartItems++;
                 cartNumber.classList.remove('hidden');
                 cartNumber.innerText = numberOfCartItems;
                 cartItems.push(productName);
-                console.log(cartItems)
+                console.log(cartItems);
+    
+                // Create a new cart item div
+                const newCartItemDiv = document.createElement('div');
+                newCartItemDiv.classList.add('py-2', 'flex', 'justify-between', 'items-center', 'cart-item');
+                newCartItemDiv.innerHTML = `
+                    <div class="flex items-center">
+                        <img src="${productImage}" alt="${productName}" class="w-12 h-12 object-cover mr-2">
+                        <div>
+                            <div class="font-semibold">${productName}</div>
+                            <div class="text-sm text-gray-500">Price: ${productPrice}</div>
+                        </div>
+                    </div>
+                    <div class="flex items-center">
+                        <button class="text-gray-500 hover:text-gray-700">-</button>
+                        <span class="mx-2">1</span>
+                        <button class="text-gray-500 hover:text-gray-700">+</button>
+                    </div>
+                    <button class="text-red-500 hover:text-red-700" id="remove-cartBtn">Remove</button>
+                `;
+    
+                // Append the new cart item div to the cart summary
+                cartSummary.querySelector('.divide-y').appendChild(newCartItemDiv);
             }
         });
     });
+    
+    
 
 
    
