@@ -1,3 +1,4 @@
+
 //functioality to direct to hompage when logo is clicked
 document.getElementById('cart-logo').addEventListener('click', ()=>{
     window.location.href = '/public/index.html'
@@ -42,6 +43,9 @@ let cartSummary = document.getElementById('cart-summary');
     addToCartBtns.forEach(button => {
         button.addEventListener('click', () => {
 
+            //let the remove all button appear after an item has been added
+            document.getElementById('remove-all-btn').classList.remove('hidden');
+
             //cariables to hold the name, price and image of the selected item
             var cartItemId = button.closest('.bg-white').id;
             var productName = document.querySelector(`#${cartItemId} h3`).textContent;
@@ -76,17 +80,24 @@ let cartSummary = document.getElementById('cart-summary');
                         <span class="mx-2">1</span>
                         <button class="text-gray-500 hover:text-gray-700">+</button>
                     </div>
-                    <button class="text-red-500 hover:text-red-700" id="remove-cartBtn">Remove</button>
+                    <button class="text-red-500 hover:text-red-700 cart-item-btn" >Remove</button>
                 `;
     
                 // Append the new cart item div to the cart summary
                 cartSummary.querySelector('.divide-y').appendChild(newCartItemDiv);
+
+
+
+    
+
             }
         });
     });
     
 
-    //remove all items from cart button
+    
+    
+
 
     document.getElementById('remove-all-btn').addEventListener('click', ()=>{
         //clear all items originally added to the cart
@@ -96,9 +107,27 @@ let cartSummary = document.getElementById('cart-summary');
         //hide the cart number
         cartNumber.classList.add('hidden')
         numberOfCartItems = 0;
+        document.getElementById('remove-all-btn').classList.add('hidden');
 
     })
+
+
+
+ 
+     // Event listener attachment for dynamically generated remove buttons
+     const removeCartItemBtns = document.addEventListener('click', function(event) {
+        if (event.target.classList.contains('cart-item-btn')) {
+            const itemDiv = event.target.closest('.cart-item');
+            if (itemDiv) {
+                itemDiv.remove();
+            }
+        }
+    });
     
+
+
+    
+
 
 
    
