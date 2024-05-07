@@ -85,6 +85,19 @@ let cartSummary = document.getElementById('cart-summary');
         });
     });
     
+
+    //remove all items from cart button
+
+    document.getElementById('remove-all-btn').addEventListener('click', ()=>{
+        //clear all items originally added to the cart
+        cartSummary.querySelector('.divide-y').innerHTML = '';
+        //reset the array keeping track of the added items
+        cartItems = [];
+        //hide the cart number
+        cartNumber.classList.add('hidden')
+        numberOfCartItems = 0;
+
+    })
     
 
 

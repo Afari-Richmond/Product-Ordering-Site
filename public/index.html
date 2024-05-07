@@ -294,7 +294,7 @@
           <div class="divide-y divide-gray-200">
               <!-- Sample cart items -->
         
-            <div class="py-2 justify-between items-center hidden" >
+            <div class="py-2 justify-between items-center hidden" id="cart-summary-items" >
               <div class="flex items-center">
                   <img src="/images/clothing.jpg" alt="Product 1" class="w-12 h-12 object-cover mr-2">
                   <div>
@@ -316,13 +316,13 @@
       <div class="mt-4">
           <div class="flex justify-between">
               <span class="font-semibold">Total Quantity:</span>
-              <span id="total-quantity">3</span>
+              <span id="total-quantity">0</span>
           </div>
           <div class="flex justify-between mt-2">
               <span class="font-semibold">Total Price:</span>
-              <span id="total-price">$35</span>
+              <span id="total-price">$0</span>
           </div>
-          <button class="mt-4 w-full bg-red-500 text-white font-semibold py-2 px-4 rounded hover:bg-red-600" >
+          <button class="mt-4 w-full bg-red-500 text-white font-semibold py-2 px-4 rounded hover:bg-red-600" id="remove-all-btn" >
               Remove All
           </button>
       </div>
