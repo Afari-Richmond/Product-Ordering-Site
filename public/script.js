@@ -127,11 +127,11 @@ let cartSummary = document.getElementById('cart-summary');
                 const index = cartItems.indexOf(productName);
                 if (index !== -1) {
                     cartItems.splice(index, 1);
-                    // Update the number of cart items
+                   
                     numberOfCartItems--;
-                    // Check if the number of cart items is zero
+                  
                     if (numberOfCartItems <= 0) {
-                        // Hide the cart number if it's zero or less
+                    
                         cartNumber.classList.add('hidden');
                     } else {
                         // Update the cart number display if it's greater than zero
