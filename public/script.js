@@ -82,6 +82,9 @@ let cartSummary = document.getElementById('cart-summary');
                     </div>
                     <button class="text-red-500 hover:text-red-700 cart-item-btn" >Remove</button>
                 `;
+                
+
+                
     
                 // Append the new cart item div to the cart summary
                 cartSummary.querySelector('.divide-y').appendChild(newCartItemDiv);
@@ -98,7 +101,7 @@ let cartSummary = document.getElementById('cart-summary');
     
     
 
-
+//functionality to remove all items from the cart
     document.getElementById('remove-all-btn').addEventListener('click', ()=>{
         //clear all items originally added to the cart
         cartSummary.querySelector('.divide-y').innerHTML = '';
@@ -114,24 +117,29 @@ let cartSummary = document.getElementById('cart-summary');
 
 
  
-     // Event listener attachment for dynamically generated remove buttons
-     const removeCartItemBtns = document.addEventListener('click', function(event) {
+     // Event listener attachment for remove buttons
+     document.addEventListener('click', function(event) {
         if (event.target.classList.contains('cart-item-btn')) {
             const itemDiv = event.target.closest('.cart-item');
             if (itemDiv) {
                 itemDiv.remove();
-                numberOfCartItems--;
-                if (numberOfCartItems <= 0) {
-                  
-                    cartNumber.classList.add('hidden');
-                } else {
+                // Remove the item from the cartItems array
+                const productName = itemDiv.querySelector('.font-semibold').textContent;
+                const index = cartItems.indexOf(productName);
+                if (index !== -1) {
+                    cartItems.splice(index, 1);
                     
-                    cartNumber.innerText = numberOfCartItems;
                 }
-                console.log(numberOfCartItems); 
             }
         }
     });
+
+
+    
+   
+
+    
+    
 
 
     
