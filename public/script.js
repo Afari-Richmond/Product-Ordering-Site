@@ -117,8 +117,7 @@ let cartSummary = document.getElementById('cart-summary');
 
 
  
-     // Event listener attachment for remove buttons
-     document.addEventListener('click', function(event) {
+    document.addEventListener('click', function(event) {
         if (event.target.classList.contains('cart-item-btn')) {
             const itemDiv = event.target.closest('.cart-item');
             if (itemDiv) {
@@ -128,11 +127,21 @@ let cartSummary = document.getElementById('cart-summary');
                 const index = cartItems.indexOf(productName);
                 if (index !== -1) {
                     cartItems.splice(index, 1);
-                    
+                    // Update the number of cart items
+                    numberOfCartItems--;
+                    // Check if the number of cart items is zero
+                    if (numberOfCartItems <= 0) {
+                        // Hide the cart number if it's zero or less
+                        cartNumber.classList.add('hidden');
+                    } else {
+                        // Update the cart number display if it's greater than zero
+                        cartNumber.innerText = numberOfCartItems;
+                    }
                 }
             }
         }
     });
+    
 
 
     
