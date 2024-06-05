@@ -1,3 +1,37 @@
+// dynamically generate products with API
+
+let productsHTML = '';
+
+// Loop to generate the HTML using data from the products array
+products.forEach((product) => {
+    productsHTML +=  ` <div class="bg-white rounded-lg overflow-hidden shadow-md" id="item-${product.id}">
+        <img src="${product.image}" alt="Product" class="w-full h-48 object-cover">
+        <div class="p-4">
+          <h3 class="text-lg font-semibold mb-2">${product.name}</h3>
+          <p class="text-gray-700 mb-2">&#8373;${product.price}</p>
+          <div class="flex items-center mb-4"></div>
+          <!-- Add to Cart Button -->
+          <button class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600" id="add-to-cart">Add to Cart</button>
+        </div>
+      </div>`;
+});
+
+console.log(productsHTML);
+// Append the generated HTML to the products container
+document.querySelector('.products-bar').innerHTML = productsHTML;
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 //functioality to direct to hompage when logo is clicked
 document.getElementById('cart-logo').addEventListener('click', ()=>{
